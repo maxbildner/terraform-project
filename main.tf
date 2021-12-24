@@ -123,10 +123,13 @@ resource "aws_subnet" "subnet-1" {
 # SAMPLE PROJECT
 # 1. Create VPC
 # 2. Create Internet Gateway
-# 3. Create Custom Route Table
+#   - this is wo we can assign a public IP address, so anyone can reach it
+# 3. Create Custom Route Table (optional)
 # 4. Create a Subnet
 # 5. Associate subnet with Route Table
-# 6. Create Security GRoup to allow port 22, 80, 443
+# 6. Create Security Group to allow port 22, 80, 443
+#   - determines what kind of traffic is allowed to get to you EC2 instances
+#   - port 22 so we can ssh to it
 # 7. Create a network interface with an IP in the subnet that was created in step 4
 # 8. Assign an elastic IP to the network interface created in step 7
 # 9. Create Ubuntu server and install/enable Apache2 

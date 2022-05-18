@@ -135,6 +135,12 @@ resource "aws_subnet" "subnet-1" {
   }
 }
 
+# 13) MISC NOTES
+- 5/18/22
+- a change on the package does NOT automatically triggers redeployment on all that depend on it!!!!
+- I should redeploy an AWS Lambda Function (if I modified a package that, that Lambda function uses). Redployment can be triggered by updating the package.json version (ex. from 1.0.1 -> 1.0.2)
+- See March 20-21 bug in bug log for more information
+
 
 # QUESTIONS
 # - regarding running these commands (ex. terraform apply)- running it in a nested folder will not 
